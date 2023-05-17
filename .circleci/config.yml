@@ -1,0 +1,101 @@
+version: 2.1
+orbs:
+    sonarcloud: sonarsource/sonarcloud@1.0.2
+commands:
+    pipenv-install-dev:
+        steps:
+            - run: python3 -m pip install pipenv
+            - run: python3 -m pipenv install --dev
+    pipenv-install:
+        steps:
+            - run: python3 -m pip install pipenv
+            - run: python3 -m pipenv install
+    python-lint:
+        steps:
+            - run: mkdir coverage && mkdir coverage/lint || exit 0
+            - store_artifacts:
+                path: ./coverage/lint/report.txt
+    python-test:
+            steps:
+                - run: sudo rm -f /etc/boto.cfg
+                - run:
+                    command: pipenv run test
+                    environment:
+                        AWS_ACCESS_KEY_ID: 0
+                        AWS_SECRET_ACCESS_KEY: 0
+                        AWS_DEFAULT_REGION: us-east-2
+    python-report:
+        steps:
+            - run: sudo rm -f /etc/boto.cfg
+            - run:
+                command: pipenv run coverage
+                environment:
+                    AWS_ACCESS_KEY_ID: 0
+                    AWS_SECRET_ACCESS_KEY: 0
+                    AWS_DEFAULT_REGION: us-east-2
+            - store_test_results:
+                path: ./coverage/reports
+            - store_artifacts:
+                path: ./coverage
+    pypi-setup:
+        steps:
+            - run: echo -e "[pypi]" >> ~/.pypirc
+            - run: echo -e "username = __token__" >> ~/.pypirc
+            - run: echo -e "password = $PYPI_TOKEN" >> ~/.pypirc
+    pypi-deploy:
+        steps:
+            - run: python3 -m pip install --user --upgrade setuptools wheel
+            - run: python3 setup.py sdist bdist_wheel
+            - run: python3 -m pip install --user --upgrade twine
+            - run: python3 -m twine upload dist/*
+    slack-status:
+        steps:
+            - slack/status:
+                mentions: '${CIRCLE_USERNAME}, version=$CIRCLE_TAG'
+    slack-error:
+        steps:
+            - slack/status:
+                fail_only: true
+                mentions: '${CIRCLE_USERNAME}'
+jobs:
+    install-build-test:
+        docker:
+            - image: cimg/python:3.8.6
+        steps:
+            - checkout
+            - pipenv-install-dev
+            - python-lint
+            - python-test
+            - python-report
+            - sonarcloud/scan
+    install-build-deploy:
+        docker:
+            - image: cimg/python:3.8.6
+        steps:
+            - checkout
+            - pipenv-install
+            - pypi-setup
+            - pypi-deploy
+workflows:
+    install-build-deploy:
+        jobs:
+            - install-build-deploy:
+                context:
+                    - shared-pypi-token
+                    - shared-sonarcloud-token
+                filters:
+                    tags:
+                        only: /.*/
+                    branches:
+                        ignore: /.*/
+    install-build-test:
+        jobs:
+            - install-build-test:
+                context:
+                    - shared-pypi-token
+                    - shared-sonarcloud-token
+                filters:
+                    tags:
+                        ignore: /.*/
+                    branches:
+                        ignore: /dependabot.*/
