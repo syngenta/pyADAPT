@@ -89,11 +89,8 @@ workflows:
             - install-build-test:
                 context:
                     - shared-pypi-token
-                    - shared-sonarcloud-token
                 filters:
                     tags:
-                        only:
-                            - /^v.*/
                         ignore: /.*/
                     branches:
                         ignore: /dependabot.*/
