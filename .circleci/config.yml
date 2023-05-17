@@ -65,6 +65,7 @@ jobs:
             - checkout
             - pipenv-install-dev
             - python-lint
+            - python-test
             - python-report
             - sonarcloud/scan
     install-build-deploy:
