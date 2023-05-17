@@ -92,6 +92,8 @@ workflows:
                     - shared-sonarcloud-token
                 filters:
                     tags:
+                        only:
+                            - /^v.*/
                         ignore: /.*/
                     branches:
                         ignore: /dependabot.*/
