@@ -82,7 +82,8 @@ workflows:
                 filters:
                     tags:
                         only: /.*/
-
+                    branches:
+                        ignore: /.*/
     install-build-test:
         jobs:
             - install-build-test:
