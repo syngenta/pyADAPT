@@ -1,37 +1,37 @@
 import os
 from setuptools import setup, find_packages
 
-with open('README.md', 'r') as fh:
+with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='syngenta_digital_adapt',
-    version=os.getenv('CIRCLE_TAG'),
-    url='https://github.com/syngenta-digital/package-python-adapt.git',
-    author='Demetrius Bankhead, DevOps Engineer, Syngenta Digital',
-    author_email='demetrius.bankhead@syngenta.com',
-    description='Syngenta\'s ADAPT-based implementation in Python',
+    name="syngenta_digital_adapt",
+    version=os.getenv("CIRCLE_TAG"),
+    url="https://github.com/syngenta-digital/package-python-adapt.git",
+    author="Demetrius Bankhead, DevOps Engineer, Syngenta Digital",
+    author_email="demetrius.bankhead@syngenta.com",
+    description="Syngenta's ADAPT-based implementation in Python",
     long_description=long_description,
-    long_description_content_type='text/markdown',
+    long_description_content_type="text/markdown",
     packages=find_packages(),
-    python_requires='>=3.0',
+    python_requires=">=3.0",
     install_requires=[
-        'boto3',
-        'elasticsearch==7.13.4',
-        'jsonref',
-        'jsonpickle',
-        'pyyaml',
-        'requests-aws4auth',
-        'simplejson'
+        "boto3",
+        "elasticsearch==7.13.4",
+        "jsonref",
+        "jsonpickle",
+        "pyyaml",
+        "requests-aws4auth",
+        "simplejson",
     ],
     classifiers=[
-        'Environment :: Web Environment',
-        'Intended Audience :: Developers',
-        'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
-        'Topic :: Software Development :: Libraries :: Python Modules',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7'
-    ]
+        "Environment :: Web Environment",
+        "Intended Audience :: Developers",
+        "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+    ],
 )
