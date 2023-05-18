@@ -1,6 +1,4 @@
 version: 2.1
-orbs:
-    sonarcloud: sonarsource/sonarcloud@1.0.2
 commands:
     pipenv-install-dev:
         steps:
@@ -67,7 +65,6 @@ jobs:
             - python-lint
             - python-test
             - python-report
-            - sonarcloud/scan
     install-build-deploy:
         docker:
             - image: cimg/python:3.8.6
@@ -82,7 +79,6 @@ workflows:
             - install-build-deploy:
                 context:
                     - shared-pypi-token
-                    - shared-sonarcloud-token
                 filters:
                     tags:
                         only: /.*/
@@ -93,7 +89,6 @@ workflows:
             - install-build-test:
                 context:
                     - shared-pypi-token
-                    - shared-sonarcloud-token
                 filters:
                     tags:
                         ignore: /.*/
