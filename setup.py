@@ -15,15 +15,7 @@ setup(
     long_description_content_type="text/markdown",
     packages=find_packages(),
     python_requires=">=3.0",
-    install_requires=[
-        "boto3",
-        "elasticsearch==7.13.4",
-        "jsonref",
-        "jsonpickle",
-        "pyyaml",
-        "requests-aws4auth",
-        "simplejson",
-    ],
+    install_requires=[],
     classifiers=[
         "Environment :: Web Environment",
         "Intended Audience :: Developers",
