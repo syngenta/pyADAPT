@@ -5,12 +5,12 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="syngenta_digital_adapt",
+    name="pyadapt",
     version=os.getenv("CIRCLE_TAG"),
     url="https://github.com/syngenta-digital/package-python-adapt.git",
     author="Demetrius Bankhead, DevOps Engineer, Syngenta Digital",
     author_email="demetrius.bankhead@syngenta.com",
-    description="Syngenta's ADAPT-based implementation in Python",
+    description="Syngenta's open source ADAPT-based implementation in Python",
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=find_packages(),
