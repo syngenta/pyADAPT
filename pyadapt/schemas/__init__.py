@@ -98,7 +98,7 @@ def validate_result(schema: Union[str, JSONObject]):
 
 def get_schema(schema: Union[str, JSONObject]) -> JSONObject:
     """Gets a schema from the `pyadapt/schemas` directory
-    with the given name. E.g. `"Operation"` -> load file `syngenta_databus_shared/json_schemas/Operation.schema.json`.
+    with the given name. E.g. `"Operation"` -> load file `pyadapt/schemas/Operation.schema.json`.
 
     You can also pass in a raw schema object which will be returned unchanged."""
     if isinstance(schema, str):
