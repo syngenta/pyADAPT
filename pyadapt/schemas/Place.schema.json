@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Place",
+  "type": "object",
+  "properties": {
+    "container_ref": {
+      "type": "string"
+    },
+    "context_items": {
+      "type": "array",
+      "items": {
+        "$ref": "ContextItem.schema.json#"
+      }
+    },
+    "created": {
+      "description": "Created timestamp of this object within the Cropwise system.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "cropzone_ref": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "device_element_ref": {
+      "type": "string"
+    },
+    "facility_ref": {
+      "type": "string"
+    },
+    "farm_ref": {
+      "type": "string"
+    },
+    "field_ref": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "location_ref": {
+      "type": "string"
+    },
+    "modified": {
+      "description": "Modified timestamp of this object within the Cropwise system.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "place_type": {
+      "description": "This should be a tCode.",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "common-enums.schema.json#/definitions/StatusEnum"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "id"
+  ]
+}

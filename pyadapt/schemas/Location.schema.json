@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Location",
+  "type": "object",
+  "properties": {
+    "context_items": {
+      "description": "Array of ContextItem(s) that contain additional data required for the proper use and understanding of the Location.",
+      "type": "array",
+      "items": {
+        "$ref": "ContextItem.schema.json#"
+      }
+    },
+    "created": {
+      "description": "Created timestamp of this object within the Cropwise system. ISO-8601 UTC expected.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "id": {
+      "description": "This id is here to support using Locations by reference, if needed.",
+      "type": "string"
+    },
+    "modified": {
+      "description": "Modified timestamp of this object within the Cropwise system. ISO-8601 UTC expected.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "position": {
+      "$ref": "https://geojson.org/schema/Point.json",
+      "description": "GeoJSON point object expected to be in WGS84."
+    },
+    "status": {
+      "$ref": "common-enums.schema.json#/definitions/StatusEnum"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "id"
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ReferenceLayer",
+  "description": "Cropwise canonical format for a spatial reference layer.",
+  "type": "object",
+  "properties": {
+    "aliases": {
+      "description": "Array of UniqueId objects that allows multiple identifiers to be attached to this object. In this instance, it would contain the EXTERNAL identifier for the chunk of data this reference layer represents.",
+      "type": "array",
+      "items": {
+        "$ref": "UniqueId.schema.json#"
+      }
+    },
+    "attachments": {
+      "description": "Array of objects that provide links to attached files/objects.",
+      "type": "array",
+      "items": {
+        "$ref": "AttachmentLink.schema.json#"
+      },
+      "minItems": 1
+    },
+    "boundaries": {
+      "description": "Array of FieldBoundary objects that refine spatial context of this reference layer.",
+      "type": "array",
+      "items": {
+        "$ref": "FieldBoundary.schema.json#"
+      }
+    },
+    "bounding_box": {
+      "description": "GeoJSON bounding box as defined in rfc7946 section 5.0 (xMin, yMin, xMax, yMax)",
+      "type": "array",
+      "maximum": 4,
+      "minimum": 4,
+      "items": {
+        "type": "number",
+        "format": "double"
+      }
+    },
+    "context_items": {
+      "description": "Array of objects that provide additional context for this objects.",
+      "type": "array",
+      "items": {
+        "$ref": "ContextItem.schema.json#"
+      }
+    },
+    "created": {
+      "description": "Created timestamp of this object within the Cropwise system. ISO-8601 UTC expected.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "cropzones": {
+      "description": "Array of CropZone objects that give spatial, temporal, and crop context to this reference layer.",
+      "type": "array",
+      "items": {
+        "$ref": "CropZone.schema.json#"
+      }
+    },
+    "description": {
+      "description": "Friendly name label meant to help the selection of this particular chunk of data from a list.",
+      "type": "string"
+    },
+    "document_type": {
+      "$ref": "common-enums.schema.json#/definitions/DocumentTypeEnum"
+    },
+    "farms": {
+      "description": "Array of Farm objects that give context to the Field objects included in this reference layer.",
+      "type": "array",
+      "items": {
+        "$ref": "Farm.schema.json#"
+      }
+    },
+    "fields": {
+      "description": "Array of Field objects that give spatial context to this reference layer.",
+      "type": "array",
+      "items": {
+        "$ref": "Field.schema.json#"
+      }
+    },
+    "grower": {
+      "$ref": "Grower.schema.json#"
+    },
+    "id": {
+      "description": "Globally unique INTERNAL identifier for the chunk of data that this reference layer represents. ",
+      "type": "string"
+    },
+    "integration_account_ref": {
+      "description": "Id of the Cropwise IntegrationAccount that this data originated in.",
+      "type": "string",
+      "format": "uuid_uuid"
+    },
+    "land_uses": {
+      "description": "Array of objects that capture the allocation of land (Field/CropZone) resources to this reference layer.",
+      "type": "array",
+      "items": {
+        "$ref": "LandUse.schema.json#"
+      }
+    },
+    "layer_properties": {
+      "description": "Array of objects that describe the meaning of Feature properties in the spatial data.",
+      "type": "array",
+      "items": {
+        "$ref": "SpatialProperty.schema.json#"
+      },
+      "minItems": 1
+    },
+    "layer_type": {
+      "$ref": "common-enums.schema.json#/definitions/LayerTypeEnum"
+    },
+    "modified": {
+      "description": "Modified timestamp of this object within the Cropwise system. ISO-8601 UTC expected.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "notes": {
+      "description": "Array of note objects.",
+      "type": "array",
+      "items": {
+        "$ref": "Note.schema.json#"
+      }
+    },
+    "organization_ref": {
+      "description": "Id of the Cropwise Organization that this data is associated with.",
+      "type": "string",
+      "format": "uuid"
+    },
+    "status": {
+      "$ref": "common-enums.schema.json#/definitions/StatusEnum"
+    },
+    "summary_attributes": {
+      "description": "Array of RepresentationValues that captures configuration details totals like time and area.",
+      "type": "array",
+      "items": {
+        "$ref": "RepresentationValue.schema.json#"
+      }
+    },
+    "time_scopes": {
+      "description": "Array of TimeScopes (semantically scoped time objects). This is where crop season, crop year, validity range, etc. are encoded.",
+      "type": "array",
+      "items": {
+        "$ref": "TimeScope.schema.json#"
+      }
+    },
+    "version": {
+      "description": "Integer representing the version number of this object.",
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "attachments",
+    "description",
+    "id",
+    "layer_properties",
+    "layer_type"
+  ]
+}

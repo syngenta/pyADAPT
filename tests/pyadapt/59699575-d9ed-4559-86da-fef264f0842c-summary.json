@@ -1,0 +1,327 @@
+{
+    "aliases": [
+        {
+            "id": "UNKNOWN",
+            "model_scope": "PRESCRIPTION",
+            "system_type": "MANUAL",
+            "instance_system_id": ""
+        }
+    ],
+    "attachments": [
+        {
+            "description": "Source",
+            "attachment_type": "RAW_VECTOR_PRESCRIPTION",
+            "uri": "https://s3.us-east-2.amazonaws.com/dev-ingestor-uploads/agintegrated/b4fe1f79-0460-4237-9a6d-cea53d21a28b_86f9f7ed-4b40-48cd-8232-3292cab3932e/shapefile/Greenview_Greenview_Corn_Fertilizing_Multiple.zip"
+        },
+        {
+            "description": "Canonical Prescription Data",
+            "attachment_type": "NORMALIZED_VECTOR_PRESCRIPTION",
+            "uri": "https://dev-ingestor-data.s3.us-east-2.amazonaws.com/normalized/b4fe1f79-0460-4237-9a6d-cea53d21a28b_86f9f7ed-4b40-48cd-8232-3292cab3932e/prescription/59699575-d9ed-4559-86da-fef264f0842c-spatial.geojson"
+        },
+        {
+            "description": "Coverage Shape Data",
+            "attachment_type": "NORMALIZED_COVERAGE_SHAPE_DATA",
+            "uri": "https://dev-ingestor-data.s3.us-east-2.amazonaws.com/normalized/b4fe1f79-0460-4237-9a6d-cea53d21a28b_86f9f7ed-4b40-48cd-8232-3292cab3932e/prescription/59699575-d9ed-4559-86da-fef264f0842c-coverage-shape.geojson"
+        },
+        {
+            "description": "Prescription Summary Data",
+            "attachment_type": "PRESCRIPTION_SUMMARY",
+            "uri": "https://dev-ingestor-data.s3.us-east-2.amazonaws.com/normalized/b4fe1f79-0460-4237-9a6d-cea53d21a28b_86f9f7ed-4b40-48cd-8232-3292cab3932e/prescription/59699575-d9ed-4559-86da-fef264f0842c-summary.json"
+        }
+    ],
+    "bounding_box": [
+        -89.7262886215467,
+        40.08430522050088,
+        -89.72074585409747,
+        40.09153797393155
+    ],
+    "created": "2022-04-29T04:28:34.711764+00:00",
+    "crops": "UNKNOWN",
+    "description": "UNKNOWN",
+    "document_type": "PRESCRIPTION",
+    "farms": [
+        {
+            "id": "004a5811-8655-470a-a3b7-54dd8af47242",
+            "description": "Greenview",
+            "is_resolved": true
+        }
+    ],
+    "fields": [
+        {
+            "id": "9a48f281-58ee-4893-854f-feded21017be",
+            "aliases": [
+                {
+                    "id": "Greenview",
+                    "model_scope": "FIELD",
+                    "system_type": "MANUAL",
+                    "instance_system_id": ""
+                }
+            ],
+            "description": "Greenview",
+            "farm_ref": "004a5811-8655-470a-a3b7-54dd8af47242",
+            "is_resolved": true
+        }
+    ],
+    "id": "59699575-d9ed-4559-86da-fef264f0842c",
+    "integration_account_ref": "b4fe1f79-0460-4237-9a6d-cea53d21a28b_86f9f7ed-4b40-48cd-8232-3292cab3932e",
+    "land_uses": [
+        {
+            "resource_ref": "9a48f281-58ee-4893-854f-feded21017be",
+            "resource_measures": [
+                {
+                    "dtr_code": "A_AREA_ALLOCATED",
+                    "value": 288848.09697868366,
+                    "uom": "m2",
+                    "user_uom": ""
+                }
+            ],
+            "resource_type": "FIELD"
+        }
+    ],
+    "layer_properties": [
+        {
+            "name": "0_0_60",
+            "description": "The prescribed rate in mass that was sent to the implement",
+            "dtr_code": "A_CTRL_MASS_PER_AREA",
+            "code_components": [
+                {
+                    "componentCode": "CC_METADATA_PRODUCT_REF",
+                    "componentType": "METADATA",
+                    "selector": "PRODUCT_REF",
+                    "value": "123"
+                }
+            ],
+            "uom": "kg1[m2]-1",
+            "user_uom": "lb1ac-1"
+        },
+        {
+            "name": "18_46_0",
+            "description": "The prescribed rate in mass that was sent to the implement",
+            "dtr_code": "A_CTRL_MASS_PER_AREA",
+            "code_components": [
+                {
+                    "componentCode": "CC_METADATA_PRODUCT_REF",
+                    "componentType": "METADATA",
+                    "selector": "PRODUCT_REF",
+                    "value": "456"
+                }
+            ],
+            "uom": "kg1[m2]-1",
+            "user_uom": "lb1ac-1"
+        },
+        {
+            "name": "Lime",
+            "description": "The prescribed rate in mass that was sent to the implement",
+            "dtr_code": "A_CTRL_MASS_PER_AREA",
+            "code_components": [
+                {
+                    "componentCode": "CC_METADATA_PRODUCT_REF",
+                    "componentType": "METADATA",
+                    "selector": "PRODUCT_REF",
+                    "value": "789"
+                }
+            ],
+            "uom": "kg1[m2]-1",
+            "user_uom": "lb1ac-1"
+        }
+    ],
+    "layer_type": "VECTOR",
+    "modified": "2022-04-29T04:28:34.711764+00:00",
+    "operation_types": [],
+    "organization_ref": "86f9f7ed-4b40-48cd-8232-3292cab3932e",
+    "product_uses": [
+        {
+            "resource_ref": "123",
+            "resource_measures": [
+                {
+                    "dtr_code": "A_AREA_ALLOCATED",
+                    "value": 56140.176055256634,
+                    "uom": "m2",
+                    "user_uom": ""
+                },
+                {
+                    "dtr_code": "A_CTRL_MASS_TOTAL",
+                    "value": 444.1288467839993,
+                    "uom": "kg",
+                    "user_uom": "lb"
+                },
+                {
+                    "dtr_code": "A_CTRL_MASS_PER_AREA",
+                    "code_components": [
+                        {
+                            "componentCode": "CC_AGG_METHOD_MEAN",
+                            "componentType": "AGG_METHOD",
+                            "selector": "MEAN"
+                        }
+                    ],
+                    "value": 0.00791106971853562,
+                    "uom": "kg1[m2]-1",
+                    "user_uom": "lb1ac-1"
+                },
+                {
+                    "dtr_code": "A_CTRL_MASS_PER_AREA",
+                    "code_components": [
+                        {
+                            "componentCode": "CC_AGG_METHOD_NZ_MIN",
+                            "componentType": "AGG_METHOD",
+                            "selector": "NON-ZERO_MIN"
+                        }
+                    ],
+                    "value": 0.00019054469655305822,
+                    "uom": "kg1[m2]-1",
+                    "user_uom": "lb1ac-1"
+                },
+                {
+                    "dtr_code": "A_CTRL_MASS_PER_AREA",
+                    "code_components": [
+                        {
+                            "componentCode": "CC_AGG_METHOD_MAX",
+                            "componentType": "AGG_METHOD",
+                            "selector": "MAX"
+                        }
+                    ],
+                    "value": 0.030072436520697365,
+                    "uom": "kg1[m2]-1",
+                    "user_uom": "lb1ac-1"
+                }
+            ]
+        },
+        {
+            "resource_ref": "456",
+            "resource_measures": [
+                {
+                    "dtr_code": "A_AREA_ALLOCATED",
+                    "value": 47477.66406219521,
+                    "uom": "m2",
+                    "user_uom": ""
+                },
+                {
+                    "dtr_code": "A_CTRL_MASS_TOTAL",
+                    "value": 782.3651339491687,
+                    "uom": "kg",
+                    "user_uom": "lb"
+                },
+                {
+                    "dtr_code": "A_CTRL_MASS_PER_AREA",
+                    "code_components": [
+                        {
+                            "componentCode": "CC_AGG_METHOD_MEAN",
+                            "componentType": "AGG_METHOD",
+                            "selector": "MEAN"
+                        }
+                    ],
+                    "value": 0.016478593658784037,
+                    "uom": "kg1[m2]-1",
+                    "user_uom": "lb1ac-1"
+                },
+                {
+                    "dtr_code": "A_CTRL_MASS_PER_AREA",
+                    "code_components": [
+                        {
+                            "componentCode": "CC_AGG_METHOD_NZ_MIN",
+                            "componentType": "AGG_METHOD",
+                            "selector": "NON-ZERO_MIN"
+                        }
+                    ],
+                    "value": 0.0002465872543627812,
+                    "uom": "kg1[m2]-1",
+                    "user_uom": "lb1ac-1"
+                },
+                {
+                    "dtr_code": "A_CTRL_MASS_PER_AREA",
+                    "code_components": [
+                        {
+                            "componentCode": "CC_AGG_METHOD_MAX",
+                            "componentType": "AGG_METHOD",
+                            "selector": "MAX"
+                        }
+                    ],
+                    "value": 0.0392297904668061,
+                    "uom": "kg1[m2]-1",
+                    "user_uom": "lb1ac-1"
+                }
+            ]
+        },
+        {
+            "resource_ref": "789",
+            "resource_measures": [
+                {
+                    "dtr_code": "A_AREA_ALLOCATED",
+                    "value": 257087.0190163495,
+                    "uom": "m2",
+                    "user_uom": ""
+                },
+                {
+                    "dtr_code": "A_CTRL_MASS_TOTAL",
+                    "value": 49904.57821426404,
+                    "uom": "kg",
+                    "user_uom": "lb"
+                },
+                {
+                    "dtr_code": "A_CTRL_MASS_PER_AREA",
+                    "code_components": [
+                        {
+                            "componentCode": "CC_AGG_METHOD_MEAN",
+                            "componentType": "AGG_METHOD",
+                            "selector": "MEAN"
+                        }
+                    ],
+                    "value": 0.19411551156960727,
+                    "uom": "kg1[m2]-1",
+                    "user_uom": "lb1ac-1"
+                },
+                {
+                    "dtr_code": "A_CTRL_MASS_PER_AREA",
+                    "code_components": [
+                        {
+                            "componentCode": "CC_AGG_METHOD_NZ_MIN",
+                            "componentType": "AGG_METHOD",
+                            "selector": "NON-ZERO_MIN"
+                        }
+                    ],
+                    "value": 0.000112085115619446,
+                    "uom": "kg1[m2]-1",
+                    "user_uom": "lb1ac-1"
+                },
+                {
+                    "dtr_code": "A_CTRL_MASS_PER_AREA",
+                    "code_components": [
+                        {
+                            "componentCode": "CC_AGG_METHOD_MAX",
+                            "componentType": "AGG_METHOD",
+                            "selector": "MAX"
+                        }
+                    ],
+                    "value": 1.1641160108235662,
+                    "uom": "kg1[m2]-1",
+                    "user_uom": "lb1ac-1"
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "id": "123",
+            "description": "product_1"
+        },
+        {
+            "id": "456",
+            "description": "product_2"
+        },
+        {
+            "id": "789",
+            "description": "product_3"
+        }
+    ],
+    "status": "ACTIVE",
+    "summary_attributes": [
+        {
+            "dtr_code": "A_AREA_TOTAL",
+            "value": 288848.3063038239,
+            "uom": "m2",
+            "user_uom": ""
+        }
+    ],
+    "time_scopes": [],
+    "version": 0
+}

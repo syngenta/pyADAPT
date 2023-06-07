@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LayerProperty",
+  "type": "object",
+  "properties": {
+    "code_components": {
+      "description": "Semantic objects that further refine the meaning of the Representation code",
+      "type": "array",
+      "items": {
+        "$ref": "CodeComponent.schema.json#"
+      }
+    },
+    "description": {
+      "description": "Simple description about the data being collected. Should come from the DTR.",
+      "type": "string"
+    },
+    "dtr_code": {
+      "description": "Representation code from the data type registry that describes the data being collected. Should come from the DTR.",
+      "type": "string"
+    },
+    "name": {
+      "description": "Label that appears as the property/column name. Ideally 10 characters or less to support rendering as shapefile.",
+      "type": "string"
+    },
+    "uom": {
+      "description": "Unit of measure code that is the default for this representation code. This is the UoM that the data is stored in. Should come from the DTR.",
+      "type": "string"
+    },
+    "user_uom": {
+      "description": "Unit of measure code that preserves the units the data was originally received in. Should come from the raw data.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "name"
+  ]
+}

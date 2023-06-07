@@ -11,10 +11,11 @@ allow_prereleases = true
 
 [packages]
 dynamodb_json ="*"
-jsonschema = "*"
+"jsonschema[format-nongpl]" = "*"
 jsonref = "*"
 pyyaml = "*"
 jsonpickle = "*"
+typing_extensions = "*"
 
 [dev-packages]
 autopep8 = "*"
@@ -24,8 +25,10 @@ pytest-cov = "*"
 moto = "*"
 black = "*"
 ruff = "*"
+pre-commit = "*"
 
 [scripts]
 test = "python -m unittest discover"
 coverage = "coverage run --source application/ -m  pytest tests/application --cov=application --junitxml ./coverage/reports/xunit.xml --cov-report xml:./coverage/reports/coverage.xml --html=./coverage/unit-test/index.html --self-contained-html --cov-report html:./coverage -p no:warnings -o log_cli=true"
 lint = "ruff ."
+format-check = "black . --check"

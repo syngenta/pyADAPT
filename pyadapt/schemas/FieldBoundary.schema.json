@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FieldBoundary",
+  "type": "object",
+  "properties": {
+    "area": {
+      "$ref": "RepresentationValue.schema.json#"
+    },
+    "boundary_use": {
+      "$ref": "common-enums.schema.json#/definitions/BoundaryUseTypeEnum"
+    },
+    "context_items": {
+      "type": "array",
+      "items": {
+        "$ref": "ContextItem.schema.json#"
+      }
+    },
+    "created": {
+      "description": "Created timestamp of this object within the Cropwise system.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "description": {
+      "type": "string"
+    },
+    "features": {
+      "$ref": "https://geojson.org/schema/FeatureCollection.json"
+    },
+    "field_ref": {
+      "type": "string"
+    },
+    "geometry": {
+      "$ref": "https://geojson.org/schema/MultiPolygon.json"
+    },
+    "id": {
+      "type": "string"
+    },
+    "method_of_capture": {
+      "$ref": "common-enums.schema.json#/definitions/BoundaryMethodOfCaptureEnum"
+    },
+    "modified": {
+      "description": "Modified timestamp of this object within the Cropwise system.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "$ref": "common-enums.schema.json#/definitions/StatusEnum"
+    },
+    "time_scopes": {
+      "type": "array",
+      "items": {
+        "$ref": "TimeScope.schema.json#"
+      }
+    },
+    "x_max": {
+      "type": "number",
+      "format": "double"
+    },
+    "x_min": {
+      "type": "number",
+      "format": "double"
+    },
+    "y_max": {
+      "type": "number",
+      "format": "double"
+    },
+    "y_min": {
+      "type": "number",
+      "format": "double"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "field_ref",
+    "geometry",
+    "id"
+  ]
+}

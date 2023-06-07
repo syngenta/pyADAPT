@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UniqueId",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Unique EXTERNAL identifier for the object that this is attached to. ",
+      "type": "string"
+    },
+    "instance_system_id": {
+      "description": "Specific instance within the system of origin (deere orgId, cnh companyId, etc.).",
+      "type": "string"
+    },
+    "model_scope": {
+      "description": "Class/domain this object identifies (farm, field, product, etc.). This is a tCode",
+      "type": "string"
+    },
+    "system_type": {
+      "description": "System of origin that created this identifier (deere, cnh, claas, etc.). This is a tCode",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "model_scope",
+    "system_type"
+  ]
+}

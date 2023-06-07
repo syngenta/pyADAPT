@@ -1,0 +1,746 @@
+{
+    "aliases": [
+        {
+            "id": "NDk2MDYyXzYwNzVkYjU0ZjcwODkyMDQxYzVhMGJkYg",
+            "model_scope": "DOCUMENT",
+            "system_type": "JOHN_DEERE",
+            "instance_system_id": "496062"
+        }
+    ],
+    "asset_uses": [
+        {
+            "resource_ref": "UNKNOWN",
+            "resource_measures": [
+                {
+                    "dtr_code": "A_AREA_ALLOCATED",
+                    "value": 199500.0,
+                    "uom": "m2",
+                    "user_uom": "ha"
+                },
+                {
+                    "dtr_code": "A_TIME_ALLOCATED",
+                    "value": 24280.0,
+                    "uom": "sec",
+                    "user_uom": "sec"
+                },
+                {
+                    "dtr_code": "M_ACT_SPEED",
+                    "value": 5.7,
+                    "uom": "km1hr-1",
+                    "user_uom": "km1hr-1"
+                }
+            ],
+            "resource_type": "ASSET"
+        }
+    ],
+    "assets": [
+        {
+            "id": "2daffb34-38a8-5645-a017-bc153380af18",
+            "aliases": [
+                {
+                    "id": "UNKNOWN",
+                    "model_scope": "ASSET",
+                    "system_type": "JOHN_DEERE",
+                    "instance_system_id": "496062"
+                }
+            ],
+            "description": "UNKNOWN",
+            "serial_number": "UNKNOWN"
+        }
+    ],
+    "attachments": [
+        {
+            "description": "Source",
+            "attachment_type": "RAW_OPERATIONS_DATA",
+            "uri": "https://dev-ingestor-data.s3.us-east-2.amazonaws.com/raw/john_deere/3e438858-f0fe-44fc-ac69-f3fa20779807_ae94ae4f-e479-49b3-9b46-aff003a6794f/operation/NDk2MDYyXzYwNzVkYjU0ZjcwODkyMDQxYzVhMGJkYg.json"
+        },
+        {
+            "description": "Raw Spatial Data",
+            "attachment_type": "RAW_SPATIAL_OPERATIONS_DATA",
+            "uri": "https://dev-ingestor-data.s3.us-east-2.amazonaws.com/raw/john_deere/3e438858-f0fe-44fc-ac69-f3fa20779807_ae94ae4f-e479-49b3-9b46-aff003a6794f/shapefile/NDk2MDYyXzYwNzVkYjU0ZjcwODkyMDQxYzVhMGJkYg.zip"
+        },
+        {
+            "description": "Canonical Spatial Data",
+            "attachment_type": "NORMALIZED_SPATIAL_OPERATIONS_DATA",
+            "uri": "https://dev-ingestor-data.s3.us-east-2.amazonaws.com/normalized/3e438858-f0fe-44fc-ac69-f3fa20779807_ae94ae4f-e479-49b3-9b46-aff003a6794f/operation/3a738566-61ae-5177-9551-b30423cd5661-spatial.geojson"
+        },
+        {
+            "description": "Coverage Shape Data",
+            "attachment_type": "NORMALIZED_COVERAGE_SHAPE_DATA",
+            "uri": "https://dev-ingestor-data.s3.us-east-2.amazonaws.com/normalized/3e438858-f0fe-44fc-ac69-f3fa20779807_ae94ae4f-e479-49b3-9b46-aff003a6794f/operation/3a738566-61ae-5177-9551-b30423cd5661-coverage-shape.geojson"
+        },
+        {
+            "description": "Canonical Summary Data",
+            "attachment_type": "NORMALIZED_OPERATIONS_DATA",
+            "uri": "https://dev-ingestor-data.s3.us-east-2.amazonaws.com/normalized/3e438858-f0fe-44fc-ac69-f3fa20779807_ae94ae4f-e479-49b3-9b46-aff003a6794f/operation/3a738566-61ae-5177-9551-b30423cd5661-summary.json"
+        },
+        {
+            "description": "A_YLD_VOL_PER_AREA",
+            "attachment_type": "IMAGE-MAP",
+            "uri": "https://dev-ingestor-data.s3.us-east-2.amazonaws.com/raw/john_deere/3e438858-f0fe-44fc-ac69-f3fa20779807_ae94ae4f-e479-49b3-9b46-aff003a6794f/image/HarvestYieldResult-NDk2MDYyXzYwNzVkYjU0ZjcwODkyMDQxYzVhMGJkYg.png"
+        },
+        {
+            "description": "A_YLD_WMAS_PER_AREA",
+            "attachment_type": "IMAGE-MAP",
+            "uri": "https://dev-ingestor-data.s3.us-east-2.amazonaws.com/raw/john_deere/3e438858-f0fe-44fc-ac69-f3fa20779807_ae94ae4f-e479-49b3-9b46-aff003a6794f/image/HarvestWetMassResult-NDk2MDYyXzYwNzVkYjU0ZjcwODkyMDQxYzVhMGJkYg.png"
+        },
+        {
+            "description": "A_YLD_CONTOUR",
+            "attachment_type": "IMAGE-MAP",
+            "uri": "https://dev-ingestor-data.s3.us-east-2.amazonaws.com/raw/john_deere/3e438858-f0fe-44fc-ac69-f3fa20779807_ae94ae4f-e479-49b3-9b46-aff003a6794f/image/HarvestYieldContourResult-NDk2MDYyXzYwNzVkYjU0ZjcwODkyMDQxYzVhMGJkYg.png"
+        },
+        {
+            "description": "A_YLD_MOISTURE",
+            "attachment_type": "IMAGE-MAP",
+            "uri": "https://dev-ingestor-data.s3.us-east-2.amazonaws.com/raw/john_deere/3e438858-f0fe-44fc-ac69-f3fa20779807_ae94ae4f-e479-49b3-9b46-aff003a6794f/image/HarvestMoistureResult-NDk2MDYyXzYwNzVkYjU0ZjcwODkyMDQxYzVhMGJkYg.png"
+        },
+        {
+            "description": "M_ACT_SPEED",
+            "attachment_type": "IMAGE-MAP",
+            "uri": "https://dev-ingestor-data.s3.us-east-2.amazonaws.com/raw/john_deere/3e438858-f0fe-44fc-ac69-f3fa20779807_ae94ae4f-e479-49b3-9b46-aff003a6794f/image/HarvestSpeedResult-NDk2MDYyXzYwNzVkYjU0ZjcwODkyMDQxYzVhMGJkYg.png"
+        }
+    ],
+    "bounding_box": [
+        -89.7570925297811,
+        39.982506685301296,
+        -89.75304651432653,
+        39.98970654392066
+    ],
+    "created": "2022-11-15T17:23:07.407728+00:00",
+    "crop": {
+        "id": "ZEAMX",
+        "aliases": [
+            {
+                "id": 173,
+                "model_scope": "CROP",
+                "system_type": "JOHN_DEERE",
+                "instance_system_id": "496062"
+            }
+        ],
+        "description": "CORN_WET",
+        "is_resolved": true
+    },
+    "description": "150926 1158 HARVEST",
+    "document_state": "DONE",
+    "document_type": "WORK_RECORD",
+    "farms": [
+        {
+            "id": "c926c57d-37c3-49d8-97f6-a35d0bf99bab",
+            "aliases": [
+                {
+                    "id": "8a4bbb03-fdc7-afe0-36d6-3e2fa8ce811c",
+                    "model_scope": "FARM",
+                    "system_type": "JOHN_DEERE",
+                    "instance_system_id": "496062"
+                }
+            ],
+            "description": "GREENWOOD",
+            "grower_ref": "6e0feb71-5091-f576-1bc5-a4e0f42072a3",
+            "is_resolved": false
+        }
+    ],
+    "fields": [
+        {
+            "id": "95234b0c-e059-479f-a23f-18e47dec1595",
+            "aliases": [
+                {
+                    "id": "7bf0244b-9a9e-63cb-0d74-119cd6101e43",
+                    "model_scope": "FIELD",
+                    "system_type": "JOHN_DEERE",
+                    "instance_system_id": "496062"
+                }
+            ],
+            "description": "SOUTH",
+            "grower_ref": "6e0feb71-5091-f576-1bc5-a4e0f42072a3",
+            "farm_ref": "c926c57d-37c3-49d8-97f6-a35d0bf99bab",
+            "is_resolved": true
+        }
+    ],
+    "grower": {
+        "id": "b1348b76-9767-5981-a993-22c9baa55bff",
+        "aliases": [
+            {
+                "id": "6e0feb71-5091-f576-1bc5-a4e0f42072a3",
+                "model_scope": "GROWER",
+                "system_type": "JOHN_DEERE",
+                "instance_system_id": "496062"
+            }
+        ],
+        "description": "POWER FARMS",
+        "is_resolved": false
+    },
+    "id": "3a738566-61ae-5177-9551-b30423cd5661",
+    "integration_account_ref": "3e438858-f0fe-44fc-ac69-f3fa20779807_ae94ae4f-e479-49b3-9b46-aff003a6794f",
+    "land_uses": [
+        {
+            "resource_ref": "95234b0c-e059-479f-a23f-18e47dec1595",
+            "resource_measures": [
+                {
+                    "dtr_code": "A_AREA_ALLOCATED",
+                    "value": 199500.0,
+                    "uom": "m2",
+                    "user_uom": "ha"
+                },
+                {
+                    "dtr_code": "A_TIME_ALLOCATED",
+                    "value": 24280.0,
+                    "uom": "sec",
+                    "user_uom": "sec"
+                }
+            ],
+            "resource_type": "FIELD"
+        }
+    ],
+    "legends": [
+        {
+            "@type": "MapLegend",
+            "unitId": "[m3]1ha-1",
+            "ranges": [
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 17.513817872939356,
+                    "maximum": 17.513817872939356,
+                    "hexColor": "#0BA74A",
+                    "percent": 0.14
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 15.575669013760956,
+                    "maximum": 17.478578802772475,
+                    "hexColor": "#71BF44",
+                    "percent": 0.18
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 13.496563873915038,
+                    "maximum": 15.540429943594077,
+                    "hexColor": "#B2D239",
+                    "percent": 0.17
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 11.417458734069118,
+                    "maximum": 13.461324803748157,
+                    "hexColor": "#FFF200",
+                    "percent": 0.14
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 9.30311452405632,
+                    "maximum": 11.382219663902237,
+                    "hexColor": "#FDB915",
+                    "percent": 0.15
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 7.047814033375999,
+                    "maximum": 9.267875453889438,
+                    "hexColor": "#F58020",
+                    "percent": 0.13
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 0.0,
+                    "maximum": 7.0125749632091186,
+                    "hexColor": "#EC1F28",
+                    "percent": 0.09
+                }
+            ],
+            "measurementType": "HarvestYieldContourResult",
+            "description": "A_YLD_CONTOUR"
+        },
+        {
+            "@type": "MapLegend",
+            "unitId": "prcnt",
+            "ranges": [
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 15.4,
+                    "maximum": 15.4,
+                    "hexColor": "#0BA74A",
+                    "percent": 0.07
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 14.9,
+                    "maximum": 15.3,
+                    "hexColor": "#71BF44",
+                    "percent": 0.15
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 14.5,
+                    "maximum": 14.8,
+                    "hexColor": "#B2D239",
+                    "percent": 0.2
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 14.2,
+                    "maximum": 14.4,
+                    "hexColor": "#FFF200",
+                    "percent": 0.18
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 13.8,
+                    "maximum": 14.1,
+                    "hexColor": "#FDB915",
+                    "percent": 0.2
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 13.4,
+                    "maximum": 13.700000000000001,
+                    "hexColor": "#F58020",
+                    "percent": 0.14
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 0.0,
+                    "maximum": 13.3,
+                    "hexColor": "#EC1F28",
+                    "percent": 0.06
+                }
+            ],
+            "measurementType": "HarvestMoistureResult",
+            "description": "A_YLD_MOISTURE"
+        },
+        {
+            "@type": "MapLegend",
+            "unitId": "[m3]1ha-1",
+            "ranges": [
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 17.760491364107516,
+                    "maximum": 17.760491364107516,
+                    "hexColor": "#0BA74A",
+                    "percent": 0.14
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 15.505190873427196,
+                    "maximum": 17.72525229394064,
+                    "hexColor": "#71BF44",
+                    "percent": 0.19
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 13.144173172246237,
+                    "maximum": 15.469951803260317,
+                    "hexColor": "#B2D239",
+                    "percent": 0.17
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 10.536481979897118,
+                    "maximum": 13.108934102079358,
+                    "hexColor": "#FFF200",
+                    "percent": 0.17
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 7.928790787547999,
+                    "maximum": 10.501242909730237,
+                    "hexColor": "#FDB915",
+                    "percent": 0.15
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 4.686796332195039,
+                    "maximum": 7.8935517173811185,
+                    "hexColor": "#F58020",
+                    "percent": 0.12
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 0.0,
+                    "maximum": 4.65155726202816,
+                    "hexColor": "#EC1F28",
+                    "percent": 0.06
+                }
+            ],
+            "measurementType": "HarvestYieldResult",
+            "description": "A_YLD_VOL_PER_AREA"
+        },
+        {
+            "@type": "MapLegend",
+            "unitId": "t1ha-1",
+            "ranges": [
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 12.866,
+                    "maximum": 12.866,
+                    "hexColor": "#0BA74A",
+                    "percent": 0.14
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 11.231,
+                    "maximum": 12.865,
+                    "hexColor": "#71BF44",
+                    "percent": 0.19
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 9.473,
+                    "maximum": 11.23,
+                    "hexColor": "#B2D239",
+                    "percent": 0.18
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 7.6450000000000005,
+                    "maximum": 9.472,
+                    "hexColor": "#FFF200",
+                    "percent": 0.17
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 5.738,
+                    "maximum": 7.644,
+                    "hexColor": "#FDB915",
+                    "percent": 0.15
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 3.407,
+                    "maximum": 5.737,
+                    "hexColor": "#F58020",
+                    "percent": 0.12
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 0.0,
+                    "maximum": 3.406,
+                    "hexColor": "#EC1F28",
+                    "percent": 0.05
+                }
+            ],
+            "measurementType": "HarvestWetMassResult",
+            "description": "A_YLD_WMAS_PER_AREA"
+        },
+        {
+            "@type": "MapLegend",
+            "unitId": "km1hr-1",
+            "ranges": [
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 6.73,
+                    "maximum": 6.73,
+                    "hexColor": "#0BA74A",
+                    "percent": 0.06
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 6.37,
+                    "maximum": 6.720000000000001,
+                    "hexColor": "#71BF44",
+                    "percent": 0.2
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 6.1,
+                    "maximum": 6.36,
+                    "hexColor": "#B2D239",
+                    "percent": 0.24
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 5.79,
+                    "maximum": 6.09,
+                    "hexColor": "#FFF200",
+                    "percent": 0.19
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 5.46,
+                    "maximum": 5.78,
+                    "hexColor": "#FDB915",
+                    "percent": 0.15
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 5.02,
+                    "maximum": 5.45,
+                    "hexColor": "#F58020",
+                    "percent": 0.11
+                },
+                {
+                    "@type": "MapLegendItem",
+                    "minimum": 0.0,
+                    "maximum": 5.01,
+                    "hexColor": "#EC1F28",
+                    "percent": 0.05
+                }
+            ],
+            "measurementType": "HarvestSpeedResult",
+            "description": "M_ACT_SPEED"
+        }
+    ],
+    "modified": "2022-11-15T17:23:07.407728+00:00",
+    "operation_types": [
+        "HARVEST"
+    ],
+    "organization_ref": "ae94ae4f-e479-49b3-9b46-aff003a6794f",
+    "parties": [],
+    "party_uses": [],
+    "product_uses": [
+        {
+            "resource_ref": "04f8285b-7fc9-5f9f-aa61-aba9940d12b5",
+            "resource_type": "PRODUCT",
+            "resource_measures": [
+                {
+                    "dtr_code": "A_AREA_ALLOCATED",
+                    "value": 199500.0,
+                    "uom": "m2",
+                    "user_uom": "ha"
+                },
+                {
+                    "dtr_code": "A_YLD_VOL_TOTAL",
+                    "value": 248.8,
+                    "uom": "m3",
+                    "user_uom": "m3"
+                },
+                {
+                    "dtr_code": "A_YLD_VOL_PER_AREA",
+                    "value": 12.47,
+                    "uom": "[m3]1ha-1",
+                    "user_uom": "[m3]1ha-1"
+                },
+                {
+                    "dtr_code": "A_YLD_MOISTURE",
+                    "value": 14.39,
+                    "uom": "prcnt",
+                    "user_uom": "prcnt"
+                },
+                {
+                    "dtr_code": "A_YLD_WMAS_TOTAL",
+                    "value": 179.5,
+                    "uom": "t",
+                    "user_uom": "t"
+                },
+                {
+                    "dtr_code": "A_YLD_WMAS_PER_AREA",
+                    "value": 9.0,
+                    "uom": "t1ha-1",
+                    "user_uom": "t1ha-1"
+                }
+            ],
+            "is_carrier": "false",
+            "is_tank_mix": "false",
+            "mix_components": [
+                {
+                    "resource_ref": "513eff9d-4fa2-5056-8cc7-34b177608f64",
+                    "resource_type": "PRODUCT",
+                    "is_carrier": "false",
+                    "is_tank_mix": "false",
+                    "resource_measures": [
+                        {
+                            "dtr_code": "A_AREA_ALLOCATED",
+                            "value": 199500.0,
+                            "uom": "m2",
+                            "user_uom": "ha"
+                        },
+                        {
+                            "dtr_code": "A_YLD_VOL_TOTAL",
+                            "value": 248.8,
+                            "uom": "m3",
+                            "user_uom": "m3"
+                        },
+                        {
+                            "dtr_code": "A_YLD_VOL_PER_AREA",
+                            "value": 12.47,
+                            "uom": "[m3]1ha-1",
+                            "user_uom": "[m3]1ha-1"
+                        },
+                        {
+                            "dtr_code": "A_YLD_MOISTURE",
+                            "value": 14.39,
+                            "uom": "prcnt",
+                            "user_uom": "prcnt"
+                        },
+                        {
+                            "dtr_code": "A_YLD_WMAS_TOTAL",
+                            "value": 179.5,
+                            "uom": "t",
+                            "user_uom": "t"
+                        },
+                        {
+                            "dtr_code": "A_YLD_WMAS_PER_AREA",
+                            "value": 9.0,
+                            "uom": "t1ha-1",
+                            "user_uom": "t1ha-1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "id": "513eff9d-4fa2-5056-8cc7-34b177608f64",
+            "aliases": [
+                {
+                    "id": "Corn",
+                    "model_scope": "PRODUCT",
+                    "system_type": "JOHN_DEERE",
+                    "instance_system_id": "496062"
+                }
+            ],
+            "description": "Corn",
+            "product_type": "HARVESTED_COMMODITY",
+            "has_crop_protection": false,
+            "has_crop_nutrition": false,
+            "has_harvested_commodity": false,
+            "category": "UNKNOWN",
+            "form": "SOLID",
+            "is_resolved": "false"
+        },
+        {
+            "id": "04f8285b-7fc9-5f9f-aa61-aba9940d12b5",
+            "aliases": [
+                {
+                    "id": "CORN_WET",
+                    "model_scope": "PRODUCT",
+                    "system_type": "JOHN_DEERE",
+                    "instance_system_id": "496062"
+                }
+            ],
+            "description": "CORN_WET",
+            "product_type": "HARVESTED_COMMODITY",
+            "form": "SOLID",
+            "is_resolved": "false",
+            "product_components": [
+                {
+                    "product_ref": "513eff9d-4fa2-5056-8cc7-34b177608f64"
+                }
+            ]
+        }
+    ],
+    "spatial_properties": [
+        {
+            "name": "Distance",
+            "description": "Distance travelled since the last recorded point",
+            "dtr_code": "M_DISTANCE_TRAVELED",
+            "default_uom": "m",
+            "user_uom": "ft"
+        },
+        {
+            "name": "SecWidth",
+            "description": "Width of the implement section",
+            "dtr_code": "M_SECTION_WIDTH",
+            "default_uom": "m",
+            "user_uom": "ft"
+        },
+        {
+            "name": "YldVolRate",
+            "description": "Volumetric yield (Note this column is only generated for volumetric crops)",
+            "dtr_code": "A_YLD_VOL_PER_AREA",
+            "default_uom": "l1[m2]-1",
+            "user_uom": "bu1ac-1"
+        },
+        {
+            "name": "SecID",
+            "description": "The implement section id for this sample",
+            "dtr_code": "M_SECTION_ID",
+            "default_uom": "",
+            "user_uom": ""
+        },
+        {
+            "name": "Crop",
+            "description": "Crop designator",
+            "dtr_code": "A_DSG_CROP",
+            "default_uom": "",
+            "user_uom": ""
+        },
+        {
+            "name": "Moisture",
+            "description": "The crop moisture reading",
+            "dtr_code": "A_YLD_MOISTURE",
+            "default_uom": "prcnt",
+            "user_uom": "prcnt"
+        },
+        {
+            "name": "WetMasRate",
+            "description": "The wet (raw) mass reading",
+            "dtr_code": "A_YLD_WMAS_PER_AREA",
+            "default_uom": "kg1[m2]-1",
+            "user_uom": "lb1ac-1"
+        },
+        {
+            "name": "Heading",
+            "description": "Direction of travel",
+            "dtr_code": "M_HEADING",
+            "default_uom": "arcdeg",
+            "user_uom": ""
+        },
+        {
+            "name": "Product",
+            "description": "Product designator",
+            "dtr_code": "A_DSG_PRODUCT",
+            "default_uom": "",
+            "user_uom": ""
+        },
+        {
+            "name": "Elevation",
+            "description": "Elevation from the GPS receiver, adjusted for the receivers vertical offset",
+            "dtr_code": "M_ELEVATION",
+            "default_uom": "m",
+            "user_uom": "ft"
+        },
+        {
+            "name": "Time",
+            "description": "ISO8601 timestamp in UTC",
+            "dtr_code": "M_TIMESTAMP",
+            "default_uom": "",
+            "user_uom": ""
+        },
+        {
+            "name": "Machine",
+            "description": "Machine designator",
+            "dtr_code": "A_DSG_MACHINE",
+            "default_uom": "",
+            "user_uom": ""
+        }
+    ],
+    "status": "ACTIVE",
+    "task_measures": [
+        {
+            "dtr_code": "A_AREA_TOTAL",
+            "value": 199500.0,
+            "uom": "m2",
+            "user_uom": "ha"
+        },
+        {
+            "dtr_code": "A_TIME_TOTAL",
+            "value": 24280.0,
+            "uom": "sec",
+            "user_uom": "sec"
+        }
+    ],
+    "time_scopes": [
+        {
+            "description": "2015",
+            "date_context": "CROP_YEAR",
+            "iso_time": "2015-01-01T00:00:00+00:00"
+        },
+        {
+            "description": "START",
+            "date_context": "ACTUAL_START",
+            "iso_time": "2015-09-26T11:58:52+00:00"
+        },
+        {
+            "description": "END",
+            "date_context": "ACTUAL_END",
+            "iso_time": "2015-09-26T18:43:32+00:00"
+        }
+    ],
+    "version": 0,
+    "allocation": {
+        "is_allocated": true,
+        "is_resolved": true,
+        "field": "95234b0c-e059-479f-a23f-18e47dec1595",
+        "parents": []
+    }
+}

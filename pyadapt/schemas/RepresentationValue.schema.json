@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RepresentationValue",
+  "type": "object",
+  "properties": {
+    "code_components": {
+      "description": "Semantic objects that further refine the meaning of the Representation code",
+      "type": "array",
+      "items": {
+        "$ref": "CodeComponent.schema.json#"
+      }
+    },
+    "dtr_code": {
+      "description": "This describes the value being captured here with a simple code. The code should match a resolvable definition in the DTR.",
+      "type": "string"
+    },
+    "uom": {
+      "description": "If the expressed value has a unit of measure, it goes here. This should be the default UoM associated with the code in the DTR. Unit of measure codes come from the ADAPT UoM",
+      "type": "string",
+      "if": {
+        "not": {
+          "const": ""
+        }
+      },
+      "then": {
+        "format": "uom"
+      }
+    },
+    "user_uom": {
+      "description": "If the value was recieved in a different UoM, include that UoM code here. Unit of measure codes come from the ADAPT UoM",
+      "type": "string",
+      "if": {
+        "not": {
+          "const": ""
+        }
+      },
+      "then": {
+        "format": "uom"
+      }
+    },
+    "value": {
+      "description": "This is the string encoded value.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "dtr_code",
+    "value"
+  ]
+}

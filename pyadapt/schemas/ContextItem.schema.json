@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ContextItem",
+  "type": "object",
+  "properties": {
+    "code": {
+      "description": "This describes the value being captured here with a simple code. The code should match a resolvable definition in the DTR.",
+      "type": "string"
+    },
+    "created": {
+      "description": "Created timestamp of this object within the Cropwise system. ISO-8601 UTC expected.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "modified": {
+      "description": "Modified timestamp of this object within the Cropwise system. ISO-8601 UTC expected.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "nested_items": {
+      "description": "Array of ContextItems used to express a nested group of values that only have meaning when kept together. For example the US Public Land Survey System.",
+      "type": "array",
+      "items": {
+        "$ref": "#"
+      }
+    },
+    "status": {
+      "$ref": "common-enums.schema.json#/definitions/StatusEnum"
+    },
+    "time_scopes": {
+      "description": "Array of TimeScope object, used by value, to give temporal context to the value if needed.",
+      "type": "array",
+      "items": {
+        "$ref": "TimeScope.schema.json#"
+      }
+    },
+    "value": {
+      "description": "This is the string encoded value.",
+      "type": "string"
+    },
+    "value_uom": {
+      "description": "If the expressed value has a unit of measure, it goes here. Unit of measure codes come from the ADAPT UoM",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "code"
+  ],
+  "oneOf": [
+    {
+      "required": [
+        "nested_items"
+      ]
+    },
+    {
+      "required": [
+        "value"
+      ]
+    }
+  ]
+}

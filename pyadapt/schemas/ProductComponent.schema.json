@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProductComponent",
+  "type": "object",
+  "properties": {
+    "created": {
+      "description": "Created timestamp of this object within the Cropwise system.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "ingredient_ref": {
+      "type": "string"
+    },
+    "is_carrier": {
+      "type": "boolean"
+    },
+    "mix_order": {
+      "type": "integer"
+    },
+    "modified": {
+      "description": "Modified timestamp of this object within the Cropwise system.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "product_ref": {
+      "type": "string"
+    },
+    "quantity": {
+      "$ref": "RepresentationValue.schema.json#"
+    },
+    "status": {
+      "$ref": "common-enums.schema.json#/definitions/StatusEnum"
+    }
+  },
+  "additionalProperties": false,
+  "oneOf": [
+    {
+      "required": [
+        "ingredient_ref"
+      ]
+    },
+    {
+      "required": [
+        "product_ref"
+      ]
+    }
+  ]
+}

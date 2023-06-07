@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ObsSetup",
+  "type": "object",
+  "properties": {
+    "asset_ref": {
+      "type": "string"
+    },
+    "code": {
+      "description": "This should be a tCode.",
+      "type": "string"
+    },
+    "created": {
+      "description": "Created timestamp of this object within the Cropwise system.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "description": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "modified": {
+      "description": "Modified timestamp of this object within the Cropwise system.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "obs_code": {
+      "description": "This should be a tCode.",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "common-enums.schema.json#/definitions/StatusEnum"
+    },
+    "uom": {
+      "description": "This should be a tCode.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "code"
+  ]
+}

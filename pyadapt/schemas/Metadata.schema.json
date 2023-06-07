@@ -1,0 +1,114 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Metadata",
+  "description": "Cropwise canonical format for metadata.",
+  "type": "object",
+  "properties": {
+    "aliases": {
+      "type": "array",
+      "items": {
+        "$ref": "UniqueId.schema.json#"
+      }
+    },
+    "bounding_box": {
+      "example": [
+        -89.23665558,
+        34.21947806,
+        -89.23444429,
+        34.22442877
+      ],
+      "description": "GeoJSON bounding box as defined in rfc7946 section 5.0 (xMin, yMin, xMax, yMax)",
+      "type": "array",
+      "maximum": 4,
+      "minimum": 4,
+      "items": {
+        "type": "number",
+        "format": "double"
+      }
+    },
+    "character_set": {
+      "description": "TODO",
+      "type": "string"
+    },
+    "country_code": {
+      "description": "TODO",
+      "type": "string"
+    },
+    "created": {
+      "example": "2020-09-29T00:09:16.730Z",
+      "description": "Created timestamp of this object within the Cropwise system. ISO-8601 UTC expected.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "epsg_code": {
+      "description": "Globally unique INTERNAL identifier for the chunk of metadata that this object represents. ",
+      "type": "string"
+    },
+    "id": {
+      "description": "Globally unique INTERNAL identifier for the chunk of metadata that this object represents. ",
+      "type": "string",
+      "format": "uuid"
+    },
+    "integration_account_ref": {
+      "description": "Id of IntegrationAccount that this data originated in.",
+      "type": "string",
+      "format": "uuid_uuid"
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "language_code": {
+      "description": "TODO",
+      "type": "string"
+    },
+    "modified": {
+      "example": "2020-09-29T00:09:16.730Z",
+      "description": "Modified timestamp of this object within the Cropwise system. ISO-8601 UTC expected.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "organization_ref": {
+      "description": "Id of the Cropwise organization that this data is associated with, within the Cropwise system.",
+      "type": "string",
+      "format": "uuid"
+    },
+    "resource_format": {
+      "description": "TODO",
+      "type": "string"
+    },
+    "resource_id": {
+      "description": "Globally unique INTERNAL identifier for the chunk of metadata that this object represents. ",
+      "type": "string",
+      "format": "uuid"
+    },
+    "resource_link": {
+      "description": "Globally unique INTERNAL identifier for the chunk of metadata that this object represents. ",
+      "type": "string",
+      "format": "url"
+    },
+    "resource_name": {
+      "description": "TODO",
+      "type": "string"
+    },
+    "resource_source": {
+      "description": "TODO",
+      "type": "string"
+    },
+    "resource_type": {
+      "description": "TODO",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "common-enums.schema.json#/definitions/StatusEnum"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "resource_id",
+    "resource_type"
+  ]
+}
