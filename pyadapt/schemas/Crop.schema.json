@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Crop",
+  "type": "object",
+  "properties": {
+    "aliases": {
+      "type": "array",
+      "items": {
+        "$ref": "UniqueId.schema.json#"
+      }
+    },
+    "created": {
+      "description": "Created timestamp of this object within the Cropwise system.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "description": {
+      "type": "string"
+    },
+    "eppo_code": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "is_resolved": {
+      "type": "boolean"
+    },
+    "latin_name": {
+      "type": "string"
+    },
+    "lexicalizations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "modified": {
+      "description": "Modified timestamp of this object within the Cropwise system.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "$ref": "common-enums.schema.json#/definitions/StatusEnum"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "description",
+    "id"
+  ]
+}

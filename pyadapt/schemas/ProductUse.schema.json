@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProductUse",
+  "type": "object",
+  "properties": {
+    "created": {
+      "description": "Created timestamp of this object within the Cropwise system.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "is_carrier": {
+      "type": "boolean"
+    },
+    "is_tank_mix": {
+      "type": "boolean"
+    },
+    "mix_components": {
+      "type": "array",
+      "items": {
+        "$ref": "#"
+      }
+    },
+    "modified": {
+      "description": "Modified timestamp of this object within the Cropwise system.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "resource_measures": {
+      "type": "array",
+      "items": {
+        "$ref": "RepresentationValue.schema.json#"
+      }
+    },
+    "resource_ref": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "resource_type": {
+      "type": "string",
+      "enum": [
+        "PRODUCT"
+      ]
+    },
+    "status": {
+      "$ref": "common-enums.schema.json#/definitions/StatusEnum"
+    },
+    "targeted_pest_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "time_scopes": {
+      "type": "array",
+      "items": {
+        "$ref": "TimeScope.schema.json#"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "resource_ref",
+    "resource_type"
+  ]
+}

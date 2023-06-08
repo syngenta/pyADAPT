@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="pyadapt",
-    version=os.getenv("CIRCLE_TAG"),
+    version=os.environ["CIRCLE_TAG"],
     url="https://github.com/syngenta-digital/package-python-adapt.git",
     author="Demetrius Bankhead, DevOps Engineer, Syngenta Digital",
     author_email="demetrius.bankhead@syngenta.com",

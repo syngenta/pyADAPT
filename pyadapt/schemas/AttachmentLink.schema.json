@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AttachmentLink",
+  "type": "object",
+  "properties": {
+    "attachment_type": {
+      "$ref": "common-enums.schema.json#/definitions/AttachmentTypeEnum"
+    },
+    "description": {
+      "description": "Simple description about the attachment or label that can be used to fill a dropdown.",
+      "type": "string"
+    },
+    "uri": {
+      "description": "Resolvable link to the attached file/object.",
+      "type": "string",
+      "format": "uri"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "attachment_type",
+    "uri"
+  ]
+}

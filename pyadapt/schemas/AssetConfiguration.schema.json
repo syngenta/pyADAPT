@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AssetConfiguration",
+  "type": "object",
+  "properties": {
+    "location": {
+      "$ref": "https://geojson.org/schema/Geometry.json"
+    },
+    "parent_asset_ref": {
+      "$comment": "TODO: decide what format this should be - uuid? uuid_uuid? etc.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "parent_asset_ref"
+  ]
+}

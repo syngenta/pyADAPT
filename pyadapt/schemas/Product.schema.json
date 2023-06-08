@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Product",
+  "type": "object",
+  "properties": {
+    "aliases": {
+      "type": "array",
+      "items": {
+        "$ref": "UniqueId.schema.json#"
+      }
+    },
+    "brand_ref": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "ADDITIVE",
+        "CARRIER",
+        "CROP_VARIETY",
+        "FERTILIZER",
+        "FUNGICIDE",
+        "GROWTH_REGULATOR",
+        "HERBICIDE",
+        "INSECTICIDE",
+        "MANURE",
+        "NITROGEN_STABILIZER",
+        "PESTICIDE",
+        "UNKNOWN"
+      ]
+    },
+    "context_items": {
+      "type": "array",
+      "items": {
+        "$ref": "ContextItem.schema.json#"
+      }
+    },
+    "created": {
+      "description": "Created timestamp of this object within the Cropwise system.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "density": {
+      "$ref": "RepresentationValue.schema.json#"
+    },
+    "description": {
+      "type": "string"
+    },
+    "form": {
+      "type": "string",
+      "enum": [
+        "AREA",
+        "COUNT",
+        "GAS",
+        "LIQUID",
+        "SOLID",
+        "TIME",
+        "UNKNOWN"
+      ]
+    },
+    "has_crop_nutrition": {
+      "type": "boolean"
+    },
+    "has_crop_protection": {
+      "type": "boolean"
+    },
+    "has_crop_variety": {
+      "type": "boolean"
+    },
+    "has_harvested_commodity": {
+      "type": "boolean"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "is_resolved": {
+      "type": "boolean"
+    },
+    "manufacturer_ref": {
+      "type": "string"
+    },
+    "modified": {
+      "description": "Modified timestamp of this object within the Cropwise system.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "product_components": {
+      "type": "array",
+      "items": {
+        "$ref": "ProductComponent.schema.json#"
+      }
+    },
+    "product_type": {
+      "type": "string",
+      "enum": [
+        "CROP_NUTRITION",
+        "CROP_PROTECTION",
+        "CROP_VARIETY",
+        "GENERIC",
+        "HARVESTED_COMMODITY",
+        "MIX",
+        "SERVICE",
+        "UNKNOWN"
+      ]
+    },
+    "status": {
+      "$ref": "common-enums.schema.json#/definitions/StatusEnum"
+    },
+    "total_quantity": {
+      "$ref": "RepresentationValue.schema.json#"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "description",
+    "id",
+    "is_resolved"
+  ]
+}

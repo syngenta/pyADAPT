@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Asset",
+  "type": "object",
+  "properties": {
+    "aliases": {
+      "type": "array",
+      "items": {
+        "$ref": "UniqueId.schema.json#"
+      }
+    },
+    "asset_configuration": {
+      "$ref": "AssetConfiguration.schema.json#"
+    },
+    "asset_type": {
+      "description": "This should be a tCode.",
+      "type": "string"
+    },
+    "brand_ref": {
+      "type": "string"
+    },
+    "context_items": {
+      "type": "array",
+      "items": {
+        "$ref": "ContextItem.schema.json#"
+      }
+    },
+    "created": {
+      "description": "Created timestamp of this object within the Cropwise system.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "description": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "is_resolved": {
+      "type": "boolean"
+    },
+    "manufacturer_ref": {
+      "type": "string"
+    },
+    "model_ref": {
+      "type": "string"
+    },
+    "modified": {
+      "description": "Modified timestamp of this object within the Cropwise system.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "serial_number": {
+      "type": "string"
+    },
+    "series_ref": {
+      "type": "string"
+    },
+    "status": {
+      "$ref": "common-enums.schema.json#/definitions/StatusEnum"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "description",
+    "id",
+    "is_resolved"
+  ]
+}

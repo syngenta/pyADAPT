@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TimeScope",
+  "type": "object",
+  "properties": {
+    "created": {
+      "description": "Created timestamp of this object within the Cropwise system. ISO-8601 UTC expected.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "date_context": {
+      "$ref": "common-enums.schema.json#/definitions/TimeScopeContextEnum"
+    },
+    "description": {
+      "description": "Friendly name for this TimeScope. Probably used mostly for crop season/year labels.",
+      "type": "string"
+    },
+    "duration": {
+      "description": "Duration in assumed unit of ms",
+      "type": "integer",
+      "format": "int64"
+    },
+    "id": {
+      "description": "This id is here to support using TimeScopes by reference, if needed.",
+      "type": "string"
+    },
+    "iso_time_1": {
+      "description": "ISO-8601 UTC expected.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "iso_time_2": {
+      "description": "ISO-8601 UTC expected.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "modified": {
+      "description": "Modified timestamp of this object within the Cropwise system. ISO-8601 UTC expected.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "$ref": "common-enums.schema.json#/definitions/StatusEnum"
+    },
+    "time_stamp_1": {
+      "description": "Timestamp in expected unit of ms",
+      "type": "integer",
+      "format": "int64"
+    },
+    "time_stamp_2": {
+      "description": "Timestamp in expected unit of ms",
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "date_context"
+  ],
+  "anyOf": [
+    {
+      "required": [
+        "iso_time_1"
+      ]
+    },
+    {
+      "required": [
+        "time_stamp_1"
+      ]
+    }
+  ]
+}

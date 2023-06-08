@@ -1,0 +1,129 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "definitions": {
+    "AttachmentTypeEnum": {
+      "description": "Classification label of the attachment type.",
+      "type": "string",
+      "enum": [
+        "IMAGE",
+        "IMAGE-MAP",
+        "NORMALIZED_COVERAGE_SHAPE_DATA",
+        "NORMALIZED_OPERATIONS_DATA",
+        "NORMALIZED_SPATIAL_OPERATIONS_DATA",
+        "NORMALIZED_VECTOR_PRESCRIPTION",
+        "PRESCRIPTION_SUMMARY",
+        "RAW_OPERATIONS_DATA",
+        "RAW_SPATIAL_OPERATIONS_DATA",
+        "RAW_SPATIAL_OPERATIONS_DATA_FILE",
+        "RAW_VECTOR_PRESCRIPTION",
+        "SOURCE_RAW_SPATIAL_OPERATIONS_DATA",
+        "UNKNOWN"
+      ]
+    },
+    "BoundaryMethodOfCaptureEnum": {
+      "type": "string",
+      "enum": [
+        "FIELD_OP_EX_POST",
+        "HAND_DRAWN",
+        "IMAGE_DERIVED",
+        "MACHINE_DRIVEN",
+        "UNKNOWN"
+      ]
+    },
+    "BoundaryUseTypeEnum": {
+      "type": "string",
+      "enum": [
+        "ADMINISTRATIVE",
+        "ALLOCATION",
+        "EX_POST",
+        "NOMINAL",
+        "PRESCRIPTION",
+        "UNKNOWN"
+      ]
+    },
+    "DocumentStateEnum": {
+      "description": "The operational state of this document.",
+      "type": "string",
+      "enum": [
+        "DONE",
+        "DRAFT",
+        "READY",
+        "UNKNOWN"
+      ]
+    },
+    "DocumentTypeEnum": {
+      "description": "Classification label of the document type. Each has a different semantic meaning while having a similar enough structure to share this object definition.",
+      "type": "string",
+      "enum": [
+        "PRESCRIPTION",
+        "RECOMMENDATION",
+        "REFERENCE_LAYER",
+        "UNKNOWN",
+        "WORK_ORDER",
+        "WORK_RECORD"
+      ]
+    },
+    "LayerTypeEnum": {
+      "description": "Classification label of the layer type. Each has a different semantic meaning while having a similar enough structure to share this object definition.",
+      "type": "string",
+      "enum": [
+        "NON-SPATIAL",
+        "RADIAL",
+        "RASTER",
+        "VECTOR"
+      ]
+    },
+    "OperationTypeEnum": {
+      "description": "Classification label that communicate the type of field operation this document describes.",
+      "type": "string",
+      "enum": [
+        "APPLICATION",
+        "HARVEST",
+        "IRRIGATION",
+        "OBSERVATION",
+        "PLANTING",
+        "TILLAGE",
+        "UNKNOWN"
+      ]
+    },
+    "StatusEnum": {
+      "description": "Status of this object within the Cropwise system.",
+      "type": "string",
+      "enum": [
+        "ACTIVE",
+        "DELETED",
+        "UNKNOWN"
+      ]
+    },
+    "TimeScopeContextEnum": {
+      "description": "Contextual meaning of the date/time(s) within a TimeScope",
+      "type": "string",
+      "enum": [
+        "ACTUAL_END",
+        "ACTUAL_SHIPPING",
+        "ACTUAL_START",
+        "APPROVAL",
+        "CALIBRATION",
+        "CROP_SEASON",
+        "CROP_YEAR",
+        "EXPIRATION",
+        "INSTALLATION",
+        "LOAD",
+        "MAINTENANCE",
+        "PHENOMENON",
+        "PROPOSED_END",
+        "PROPOSED_START",
+        "REQUESTED_END",
+        "REQUESTED_SHIPPING",
+        "REQUESTED_START",
+        "RESULT",
+        "RESUME",
+        "SUSPEND",
+        "TIMING_EVENT",
+        "UNKNOWN",
+        "UNLOAD",
+        "VALIDITY_RANGE"
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CodeComponent",
+  "type": "object",
+  "properties": {
+    "component_code": {
+      "description": "This should be a tCode.",
+      "type": "string"
+    },
+    "component_type": {
+      "description": "This should be a tCode.",
+      "type": "string"
+    },
+    "selector": {
+      "description": "This should be a tCode.",
+      "type": "string"
+    },
+    "value": {
+      "type": "string"
+    },
+    "value_uom": {
+      "description": "This should be a tCode.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "component_code",
+    "component_type",
+    "selector"
+  ]
+}

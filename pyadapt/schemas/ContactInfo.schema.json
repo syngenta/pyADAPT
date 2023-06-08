@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ContactInfo",
+  "type": "object",
+  "properties": {
+    "address_line_1": {
+      "description": "Address, line 1.",
+      "type": "string"
+    },
+    "address_line_2": {
+      "description": "Address, line 2.",
+      "type": "string"
+    },
+    "adm_1": {
+      "description": "Administrative division, first level.",
+      "type": "string"
+    },
+    "city": {
+      "description": "City name",
+      "type": "string"
+    },
+    "contacts": {
+      "description": "Array of Contact methods.",
+      "type": "array",
+      "items": {
+        "$ref": "Contact.schema.json#"
+      }
+    },
+    "context_items": {
+      "description": "Array of ContextItem(s) that contain additional data required for the proper use and understanding of the ContactInfo.",
+      "type": "array",
+      "items": {
+        "$ref": "ContextItem.schema.json#"
+      }
+    },
+    "country": {
+      "description": "ISO-3166 country name",
+      "type": "string"
+    },
+    "country_code": {
+      "description": "ISO-3166 Alpha-3 country code",
+      "type": "string"
+    },
+    "created": {
+      "description": "Created timestamp of this object within the Cropwise system. ISO-8601 UTC expected.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "modified": {
+      "description": "Modified timestamp of this object within the Cropwise system. ISO-8601 UTC expected.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "po_box_number": {
+      "description": "Post office box number.",
+      "type": "string"
+    },
+    "position": {
+      "$ref": "Location.schema.json#"
+    },
+    "postal_code": {
+      "description": "Postal code.",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "common-enums.schema.json#/definitions/StatusEnum"
+    }
+  },
+  "additionalProperties": false,
+  "minProperties": 2
+}

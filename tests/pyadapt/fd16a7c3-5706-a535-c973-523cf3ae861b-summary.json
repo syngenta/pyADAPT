@@ -1,0 +1,301 @@
+{
+    "id": "fd16a7c3-5706-a535-c973-523cf3ae861b",
+    "aliases": [
+        {
+            "id": "3c9d1165-70fd-4464-898e-9bb052204397_e6db9249-50d5-492e-87b5-60196f6b0a2a",
+            "model_scope": "DOCUMENT",
+            "system_type": "LAND_DB",
+            "instance_system_id": "6c385c28-f42b-4c60-868b-edc0e7acac1c"
+        }
+    ],
+    "version": 0,
+    "integration_account_ref": "8cbad13e-e1be-43f3-94b5-c87508729088_7dd77324-0604-4f44-90e5-ee892d9ed930",
+    "organization_ref": "7dd77324-0604-4f44-90e5-ee892d9ed930",
+    "description": "First Choice Stylet Oil, First Choice Spray Kicker, Quilt",
+    "document_type": "WORK_RECORD",
+    "document_state": "DONE",
+    "operation_types": [
+        "APPLICATION"
+    ],
+    "time_scopes": [
+        {
+            "description": "2004",
+            "date_context": "CROP_YEAR",
+            "iso_time": "2004-01-01T00:00:00Z"
+        },
+        {
+            "description": "START",
+            "date_context": "ACTUAL_START",
+            "iso_time": "2004-05-17T14:00:00Z"
+        },
+        {
+            "description": "END",
+            "date_context": "ACTUAL_END",
+            "iso_time": "2004-05-18T00:00:00Z"
+        }
+    ],
+    "grower": {
+        "id": "1e285193-1b90-f6bb-7795-a99af3dd9de6",
+        "aliases": [
+            {
+                "id": "6c385c28-f42b-4c60-868b-edc0e7acac1c",
+                "model_scope": "GROWER",
+                "system_type": "LAND_DB",
+                "instance_system_id": "6c385c28-f42b-4c60-868b-edc0e7acac1c"
+            },
+            {
+                "id": "0012400000fB0bBAAS",
+                "model_scope": "GROWER",
+                "system_type": "LAND_DB",
+                "instance_system_id": "6c385c28-f42b-4c60-868b-edc0e7acac1c"
+            }
+        ],
+        "description": "L3 Farms",
+        "is_resolved": false
+    },
+    "farms": [
+        {
+            "id": "0d66e68a-2880-c157-5d21-f5fe2c85c402",
+            "aliases": [
+                {
+                    "id": "e5dbb876-ce72-4c3e-b067-17c5a6e77be3",
+                    "model_scope": "FARM",
+                    "system_type": "LAND_DB",
+                    "instance_system_id": "6c385c28-f42b-4c60-868b-edc0e7acac1c"
+                }
+            ],
+            "description": "Shedd",
+            "grower_ref": "1e285193-1b90-f6bb-7795-a99af3dd9de6",
+            "is_resolved": false
+        }
+    ],
+    "fields": [
+        {
+            "id": "401f8408-f9fb-5870-69f9-918ccbd7d711",
+            "aliases": [
+                {
+                    "id": "5d2ee5cb-44e6-4d13-96f7-45c9c88fe692",
+                    "model_scope": "FIELD",
+                    "system_type": "LAND_DB",
+                    "instance_system_id": "6c385c28-f42b-4c60-868b-edc0e7acac1c"
+                }
+            ],
+            "description": "Cemetary East",
+            "grower_ref": "1e285193-1b90-f6bb-7795-a99af3dd9de6",
+            "farm_ref": "0d66e68a-2880-c157-5d21-f5fe2c85c402",
+            "active_boundary_ref": "e92ab7e8-893e-8229-6c2b-86ef2975439b",
+            "is_resolved": false
+        }
+    ],
+    "cropzones": [
+        {
+            "id": "378cbcb6-21f5-a0c5-f7ee-39ed40baaa2b",
+            "aliases": [
+                {
+                    "id": "e6db9249-50d5-492e-87b5-60196f6b0a2a",
+                    "model_scope": "CROPZONE",
+                    "system_type": "LAND_DB",
+                    "instance_system_id": "6c385c28-f42b-4c60-868b-edc0e7acac1c"
+                }
+            ],
+            "description": "Cemetary East",
+            "time_scopes": [
+                {
+                    "description": "2004",
+                    "date_context": "CROP_YEAR",
+                    "iso_time": "2004-01-01T00:00:00Z"
+                }
+            ],
+            "field_ref": "401f8408-f9fb-5870-69f9-918ccbd7d711",
+            "crop_ref": "3FESC",
+            "is_resolved": false
+        }
+    ],
+    "crop": {
+        "id": "3FESC",
+        "aliases": [
+            {
+                "id": "e0c2d768-5ad4-4947-a5ef-133b346f6d2e",
+                "model_scope": "CROP",
+                "system_type": "LAND_DB",
+                "instance_system_id": "6c385c28-f42b-4c60-868b-edc0e7acac1c"
+            }
+        ],
+        "description": "Tall Fescue",
+        "is_resolved": true
+    },
+    "products": [
+        {
+            "id": "48810292-c0b9-47cc-a85b-dd45ce24b5fd",
+            "aliases": [
+                {
+                    "id": "48810292-c0b9-47cc-a85b-dd45ce24b5fd",
+                    "model_scope": "PRODUCT",
+                    "system_type": "LAND_DB",
+                    "instance_system_id": "00000000-0000-0000-0000-000000000000"
+                }
+            ],
+            "description": "First Choice Stylet Oil",
+            "product_type": "CROP_PROTECTION",
+            "is_resolved": true
+        },
+        {
+            "id": "898aba7c-1feb-4b75-b67e-5a86eeed2896",
+            "aliases": [
+                {
+                    "id": "898aba7c-1feb-4b75-b67e-5a86eeed2896",
+                    "model_scope": "PRODUCT",
+                    "system_type": "LAND_DB",
+                    "instance_system_id": "00000000-0000-0000-0000-000000000000"
+                }
+            ],
+            "description": "First Choice Spray Kicker",
+            "product_type": "CROP_NUTRITION",
+            "is_resolved": true
+        },
+        {
+            "id": "c899b704-76c5-4e6e-96ec-956900a6cccd",
+            "aliases": [
+                {
+                    "id": "c899b704-76c5-4e6e-96ec-956900a6cccd",
+                    "model_scope": "PRODUCT",
+                    "system_type": "LAND_DB",
+                    "instance_system_id": "00000000-0000-0000-0000-000000000000"
+                }
+            ],
+            "description": "Quilt",
+            "product_type": "CROP_PROTECTION",
+            "is_resolved": true
+        }
+    ],
+    "parties": [],
+    "land_uses": [
+        {
+            "resource_type": "CROPZONE",
+            "resource_ref": "378cbcb6-21f5-a0c5-f7ee-39ed40baaa2b",
+            "resource_measures": [
+                {
+                    "dtr_code": "A_AREA_ALLOCATED",
+                    "value": "56170.367776612992285450",
+                    "uom": "m2",
+                    "user_uom": "ac"
+                },
+                {
+                    "dtr_code": "A_TIME_ALLOCATED",
+                    "value": "1795.6660816990870223067990468",
+                    "uom": "sec",
+                    "user_uom": ""
+                }
+            ]
+        }
+    ],
+    "party_uses": [],
+    "product_uses": [
+        {
+            "resource_type": "PRODUCT",
+            "resource_ref": "48810292-c0b9-47cc-a85b-dd45ce24b5fd",
+            "resource_measures": [
+                {
+                    "dtr_code": "A_AREA_ALLOCATED",
+                    "value": "56170.3677766129922854500",
+                    "uom": "m2",
+                    "user_uom": "ac"
+                },
+                {
+                    "dtr_code": "A_ACT_VOL_PER_AREA",
+                    "value": "0.0000730777841631455755971693",
+                    "uom": "l1[m2]-1",
+                    "user_uom": "floz1ac-1"
+                },
+                {
+                    "dtr_code": "A_ACT_VOL_TOTAL",
+                    "value": "4.1048060127438314842499988276",
+                    "uom": "l",
+                    "user_uom": ""
+                }
+            ]
+        },
+        {
+            "resource_type": "PRODUCT",
+            "resource_ref": "898aba7c-1feb-4b75-b67e-5a86eeed2896",
+            "resource_measures": [
+                {
+                    "dtr_code": "A_AREA_ALLOCATED",
+                    "value": "56170.3677766129922854500",
+                    "uom": "m2",
+                    "user_uom": "ac"
+                },
+                {
+                    "dtr_code": "A_ACT_VOL_PER_AREA",
+                    "value": "0.0037415824938014479891036016",
+                    "uom": "l1[m2]-1",
+                    "user_uom": "gal1ac-1"
+                },
+                {
+                    "dtr_code": "A_ACT_VOL_TOTAL",
+                    "value": "210.16606474336413507336000250",
+                    "uom": "l",
+                    "user_uom": ""
+                }
+            ]
+        },
+        {
+            "resource_type": "PRODUCT",
+            "resource_ref": "c899b704-76c5-4e6e-96ec-956900a6cccd",
+            "resource_measures": [
+                {
+                    "dtr_code": "A_AREA_ALLOCATED",
+                    "value": "56170.3677766129922854500",
+                    "uom": "m2",
+                    "user_uom": "ac"
+                },
+                {
+                    "dtr_code": "A_ACT_VOL_PER_AREA",
+                    "value": "0.000102308897828403805836037",
+                    "uom": "l1[m2]-1",
+                    "user_uom": "floz1ac-1"
+                },
+                {
+                    "dtr_code": "A_ACT_VOL_TOTAL",
+                    "value": "5.7467284178413640779499972352",
+                    "uom": "l",
+                    "user_uom": ""
+                }
+            ]
+        }
+    ],
+    "task_measures": [
+        {
+            "dtr_code": "A_AREA_TOTAL",
+            "value": "56170.367776612992285450",
+            "uom": "m2",
+            "user_uom": "ac"
+        },
+        {
+            "dtr_code": "A_TIME_TOTAL",
+            "value": "1795.6660816990870223067990468",
+            "uom": "sec",
+            "user_uom": ""
+        }
+    ],
+    "attachments": [
+        {
+            "description": "Source",
+            "attachment_type": "SOURCE_SUMMARY_DATA",
+            "uri": "https://prod-ingestor-data.s3.us-east-2.amazonaws.com/raw/land_db/8cbad13e-e1be-43f3-94b5-c87508729088_7dd77324-0604-4f44-90e5-ee892d9ed930/operation/6c385c28-f42b-4c60-868b-edc0e7acac1c.zip"
+        },
+        {
+            "description": "Canonical Summary Data",
+            "attachment_type": "NORMALIZED_SUMMARY_DATA",
+            "uri": "https://prod-ingestor-data.s3.us-east-2.amazonaws.com/normalized/8cbad13e-e1be-43f3-94b5-c87508729088_7dd77324-0604-4f44-90e5-ee892d9ed930/operation/fd16a7c3-5706-a535-c973-523cf3ae861b-summary.json"
+        },
+        {
+            "description": "Canonical Coverage Shape",
+            "attachment_type": "COVERAGE_SHAPE",
+            "uri": "https://prod-ingestor-data.s3.us-east-2.amazonaws.com/normalized/8cbad13e-e1be-43f3-94b5-c87508729088_7dd77324-0604-4f44-90e5-ee892d9ed930/operation/fd16a7c3-5706-a535-c973-523cf3ae861b-coverage-shape.geojson"
+        }
+    ],
+    "status": "ACTIVE",
+    "created": "2022-11-14T22:21:17.5812112Z",
+    "modified": "2022-11-14T22:21:17.5812114Z"
+}

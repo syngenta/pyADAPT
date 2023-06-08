@@ -1,0 +1,214 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Operation",
+  "type": "object",
+  "properties": {
+    "aliases": {
+      "description": "Array of UniqueId objects that allows multiple identifiers to be attached to this object. In this instance, it would contain the EXTERNAL identifier for the chunk of data this document represents.",
+      "type": "array",
+      "items": {
+        "$ref": "UniqueId.schema.json#"
+      }
+    },
+    "allocation": {
+      "$ref": "Allocation.schema.json#"
+    },
+    "asset_uses": {
+      "description": "Array of objects that capture the allocation of asset resources to this field operation.",
+      "type": "array",
+      "items": {
+        "$ref": "AssetUse.schema.json#"
+      }
+    },
+    "assets": {
+      "description": "Array of Asset objects that define the identity of the equipment resources used in the field operation.",
+      "type": "array",
+      "items": {
+        "$ref": "Asset.schema.json#"
+      }
+    },
+    "attachments": {
+      "description": "Array of objects that provide links to attached files/objects.",
+      "type": "array",
+      "items": {
+        "$ref": "AttachmentLink.schema.json#"
+      }
+    },
+    "boundaries": {
+      "description": "Array of FieldBoundary objects that refine spatial context of this document.",
+      "type": "array",
+      "items": {
+        "$ref": "FieldBoundary.schema.json#"
+      }
+    },
+    "bounding_box": {
+      "description": "GeoJSON bounding box as defined in rfc7946 section 5.0 (xMin, yMin, xMax, yMax)",
+      "type": "array",
+      "items": {
+        "type": "number",
+        "format": "double"
+      },
+      "maxItems": 4,
+      "minItems": 4
+    },
+    "created": {
+      "description": "Created timestamp of this object within the Cropwise system. ISO-8601 UTC expected.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "crop": {
+      "$ref": "Crop.schema.json#"
+    },
+    "cropzones": {
+      "description": "Array of CropZone objects that give spatial, temporal, and crop context to this document.",
+      "type": "array",
+      "items": {
+        "$ref": "CropZone.schema.json#"
+      }
+    },
+    "description": {
+      "description": "Friendly name label meant to help the selection of this particular chunk of data from a list.",
+      "type": "string"
+    },
+    "document_state": {
+      "$ref": "common-enums.schema.json#/definitions/DocumentStateEnum"
+    },
+    "document_type": {
+      "$ref": "common-enums.schema.json#/definitions/DocumentTypeEnum"
+    },
+    "environmental_conditions": {
+      "description": "Array of Obs that capture the environmental conditions related to this field operation.",
+      "type": "array",
+      "items": {
+        "$ref": "Obs.schema.json#"
+      }
+    },
+    "farms": {
+      "description": "Array of Farm objects that give context to the Field objects included in this document.",
+      "type": "array",
+      "items": {
+        "$ref": "Farm.schema.json#"
+      }
+    },
+    "fields": {
+      "description": "Array of Field objects that give spatial context to this document.",
+      "type": "array",
+      "items": {
+        "$ref": "Field.schema.json#"
+      },
+      "minItems": 1
+    },
+    "grower": {
+      "$ref": "Grower.schema.json#"
+    },
+    "id": {
+      "description": "Globally unique INTERNAL identifier for the chunk of data that this document represents. ",
+      "type": "string",
+      "format": "uuid"
+    },
+    "integration_account_ref": {
+      "description": "Id of the Cropwise IntegrationAccount that this data originated in.",
+      "type": "string",
+      "format": "uuid_uuid"
+    },
+    "land_uses": {
+      "description": "Array of objects that capture the allocation of land (Field/CropZone) resources to this field operation.",
+      "type": "array",
+      "items": {
+        "$ref": "LandUse.schema.json#"
+      },
+      "minItems": 1
+    },
+    "modified": {
+      "description": "Modified timestamp of this object within the Cropwise system. ISO-8601 UTC expected.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "notes": {
+      "description": "Array of note objects.",
+      "type": "array",
+      "items": {
+        "$ref": "Note.schema.json#"
+      }
+    },
+    "operation_types": {
+      "description": "Array of operational classification values that communicate the type(s) of field operation(s) this document describes.",
+      "type": "array",
+      "items": {
+        "$ref": "common-enums.schema.json#/definitions/OperationTypeEnum"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "organization_ref": {
+      "description": "Id of the Cropwise Organization that this data is associated with.",
+      "type": "string",
+      "format": "uuid"
+    },
+    "parties": {
+      "description": "Array of Party objects that define the identity of the person/company resources used in the field operation.",
+      "type": "array",
+      "items": {
+        "$ref": "Party.schema.json#"
+      }
+    },
+    "party_uses": {
+      "description": "Array of objects that capture the allocation of party resources to this field operation.",
+      "type": "array",
+      "items": {
+        "$ref": "PartyUse.schema.json#"
+      }
+    },
+    "product_uses": {
+      "description": "Array of objects that capture the allocation of product resources to this field operation.",
+      "type": "array",
+      "items": {
+        "$ref": "ProductUse.schema.json#"
+      },
+      "minItems": 1
+    },
+    "products": {
+      "description": "Array of Product objects that define the identity of the product resources used in the field operation.",
+      "type": "array",
+      "items": {
+        "$ref": "Product.schema.json#"
+      }
+    },
+    "spatial_properties": {
+      "description": "Array of objects that describe the meaning of Feature properties in the high-density spatial data.",
+      "type": "array",
+      "items": {
+        "$ref": "SpatialProperty.schema.json#"
+      }
+    },
+    "status": {
+      "$ref": "common-enums.schema.json#/definitions/StatusEnum"
+    },
+    "task_measures": {
+      "description": "Array of RepresentationValues that captures whole-task totals like time and area.",
+      "type": "array",
+      "items": {
+        "$ref": "RepresentationValue.schema.json#"
+      }
+    },
+    "time_scopes": {
+      "description": "Array of TimeScopes (semantically scoped time objects). This is where crop season, crop year, start time, end time, etc. are encoded.",
+      "type": "array",
+      "items": {
+        "$ref": "TimeScope.schema.json#"
+      }
+    },
+    "version": {
+      "description": "Integer representing the version number of this object.",
+      "type": "integer"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "fields",
+    "id",
+    "land_uses",
+    "operation_types",
+    "product_uses"
+  ]
+}
